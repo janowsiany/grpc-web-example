@@ -1,0 +1,23 @@
+{
+  "name": "grpc-web-example",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@improbable-eng/grpc-web": "^0.13.0"
+  },
+  "devDependencies": {
+    "ts-loader": "^8.0.1",
+    "ts-protoc-gen": "^0.12.0",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "generate": "protoc --proto_path=protobuf/proto/ --ts_out=service=grpc-web:protobuf --js_out=import_style=commonjs,binary:protobuf protobuf/proto/service.proto",
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC"
+}
